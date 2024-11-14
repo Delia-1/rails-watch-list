@@ -7,7 +7,8 @@ class BookmarksController < ApplicationController
     if @bookmark.save
       redirect_to list_path(@list), notice: "Bookmark created successfully!"
     else
-      render :new, status: :unprocessable_entity
+      redirect_to list_path(@list), alert: "Must be at least 6 chars!"
+      # render :new, status: :unprocessable_entity
     end
   end
 
