@@ -1,4 +1,6 @@
-<h2 class="my-4 text-center"><%= @list.name %></h2>
+<div class="border border-danger">
+  <h2 class="my-4 text-center"><%= @list.name %></h2>
+</div>
 
 <!-- Bookmarks Section -->
 <h3 class="mb-4">Bookmarks</h3>
@@ -29,21 +31,9 @@
   <p class="text-muted">No bookmarks yet.</p>
 <% end %>
 
-<!-- Add Bookmark Form -->
-<h3 class="mt-5">Add a Bookmark</h3>
-<div class="card p-4 shadow-sm my-4">
-  <%= simple_form_for [@list, @bookmark], html: { class: "form" } do |f| %>
-    <div class="mb-3">
-      <% f.label :comment, class: "form-label" %>
-      <%= f.input :comment, input_html: { class: "form-control" } %>
-    </div>
-    <div class="mb-3">
-      <%= f.label :movie_id, "Choose a Movie", class: "form-label" %>
-      <%= f.input :movie_id, collection: Movie.all, label_method: :title, value_method: :id, prompt: "Select a Movie", input_html: { class: "form-select" } %>
-    </div>
-    <%= f.button :submit, "Add Bookmark", class: "btn btn-primary" %>
-  <% end %>
-</div>
+
+
+<%= render "components/form" %>
 
 <!-- Success/Error Messages -->
 <% if notice %>
