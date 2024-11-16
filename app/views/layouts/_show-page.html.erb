@@ -33,7 +33,7 @@
                 </div>
                 <p class="card-text"><strong>Overview:</strong> <%= bookmark.movie.overview %></p>
                 <p class="card-text"><strong>Rating:</strong> <%= bookmark.movie.rating %></p>
-                <p class="card-text"><strong>Comment:</strong> <%= bookmark.comment %></p>
+                <p class="card-text"><strong>Comment:</strong> <%= bookmark.movie.title %></p>
 
               </div>
             </div>
@@ -46,10 +46,8 @@
   <p class="text-muted">No bookmarks yet.</p>
 <% end %>
 
+<%= render "components/form", list: @list, bookmark: @bookmark %>
 
-
-
-<%= render "components/form" %>
 
 <!-- Success/Error Messages -->
 <% if notice %>

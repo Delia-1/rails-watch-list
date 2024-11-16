@@ -1,7 +1,1 @@
-<h1>Add a list</h1>
-<%= form_with model: @list do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
-<% end %>
-<%= link_to "All lists", root_path(@list)%>
+<%= render "layouts/new-list-page", list: @list, bookmark: @bookmark %>

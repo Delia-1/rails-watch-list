@@ -1,6 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: linear-gradient(366deg, #ae0707, #000000e0);
+  height: 140px;
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +12,9 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+h1, p{
+  color: $white,
+
 }
