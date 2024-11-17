@@ -7,7 +7,7 @@
           <div class="card-body inter-red">
             <h5 class="card-title d-flex justify-content-between">
               <%= link_to list.name, list_path(list), class: "text-decoration-none position=absolute text-black" %>
-              <%= link_to "X", list_path(list), class: "btn position=absolute", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
+              <%= link_to "X", list_path(list), class: "btn position=absolute rounded-circle border border-dark", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
             </h5>
 
 <div class="card mb-4">

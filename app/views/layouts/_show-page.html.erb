@@ -2,11 +2,11 @@
 
 </div>
 <div class="border border-danger">
-  <h2 class="my-4 text-center"><%= @list.name %></h2>
+  <h2 class="my-4 text-center text-dark"><strong><%= @list.name %></strong></h2>
 </div>
 
 <!-- Bookmarks Section -->
-<h3 class="m-4">Bookmarks</h3>
+<h3 class="m-4 text-dark"><strong> Bookmarks</strong> </h3>
 <% if @list.bookmarks.any? %>
   <div class="row">
     <% @list.bookmarks.each do |bookmark| %>
@@ -23,17 +23,17 @@
             <!-- Details Section -->
             <div class="col-md-8">
               <div class="card-body">
-                <div class="min-div d-flex d-flex justify-content-between">
+                <div class="min-div d-flex justify-content-between">
 
-                  <h5 class="card-title p-2"><%= bookmark.movie.title %></h5>
+                  <h5 class="card-title p-2 text-dark font-weight-bold"><strong> <%= bookmark.movie.title %></strong></h5>
                    <%= link_to "X",
                             list_bookmark_path(@list, bookmark),
                             data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
                             class: "btn btn-danger btn-sm mt-2" %>
                 </div>
-                <p class="card-text"><strong>Overview:</strong> <%= bookmark.movie.overview %></p>
-                <p class="card-text"><strong>Rating:</strong> <%= bookmark.movie.rating %></p>
-                <p class="card-text"><strong>Comment:</strong> <%= bookmark.movie.title %></p>
+                <p class="card-text text-dark"><strong>Overview:</strong> <%= bookmark.movie.overview %></p>
+                <p class="card-text text-dark"><strong>Rating:</strong> <%= bookmark.movie.rating %></p>
+                <p class="card-text text-dark"><strong>Comment:</strong> <%= bookmark.movie.title %></p>
 
               </div>
             </div>
